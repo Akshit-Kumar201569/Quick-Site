@@ -1,0 +1,166 @@
+:root {
+  --bg: #0b0f1a;
+  --card: #12172a;
+  --accent: #6cf2c2;
+  --accent2: #7aa2ff;
+  --text: #e6e9f0;
+  --muted: #9aa3b2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #141a3a, var(--bg));
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  padding: 2rem 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+header span {
+  color: var(--accent);
+}
+
+/* Buttons */
+.btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000;
+  padding: 0.75rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Hero */
+.hero {
+  padding: 5rem 6% 4rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.hero-card {
+  background: linear-gradient(180deg, #1b2145, var(--card));
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat h3 {
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+/* Sections */
+section {
+  padding: 4rem 6%;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature {
+  background: var(--card);
+  padding: 1.8rem;
+  border-radius: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.feature h4 {
+  margin-bottom: 0.6rem;
+}
+
+.feature p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #1b2255, #0f1330);
+  text-align: center;
+  padding: 4rem 6%;
+  border-radius: 30px;
+  margin: 3rem 6%;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 6%;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 2.4rem;
+  }
+}
